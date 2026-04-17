@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Lodestar</Name>
-  <Repository>ghcr.io/dvortsis/lodestar:0.8</Repository>
+  <Repository>ghcr.io/dvortsis/lodestar:latest</Repository>
   <Registry>https://github.com/dvortsis/lodestar</Registry>
   <Network>bridge</Network>
   <MyPort>3000</MyPort>
