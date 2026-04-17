@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lodestar</Name>
+  <Repository>ghcr.io/dvortsis/lodestar:latest</Repository>
+  <Registry>https://github.com/dvortsis/lodestar</Registry>
+  <Network>bridge</Network>
+  <MyPort>3000</MyPort>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/dvortsis/lodestar/issues</Support>
+  <Project>https://github.com/dvortsis/lodestar</Project>
+  <Overview>
+    Lodestar is a high-performance discovery interface for Bitmagnet. It features a bespoke discovery engine using PGroonga for blazingly fast deep-file searches, tiered relevance ranking (Gold/Silver/Bronze), and a mobile-friendly progressive UI.&#xD;
+    &#xD;
+    [br][b][span style='color: #E80000;']CRITICAL:[/span][/b] This requires a PostgreSQL database with the [b]PGroonga[/b] extension installed and the Lodestar SQL optimization script applied. Please see the project README for the mandatory database preparation steps.
+  </Overview>
+  <Category>Tools:Utilities Network:Web MediaApp:Video</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/dvortsis/unraid-templates/main/lodestar.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dvortsis/lodestar/main/public/compass_logo.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  
+  <Config Name="Postgres Connection URL" Target="POSTGRES_DB_URL" Default="postgresql://username:password@192.168.1.50:5432/bitmagnet" Mode="" Description="The full connection string for your Bitmagnet PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false"/>
+
+  <Config Name="Web Port" Target="3000" Default="3000" Mode="tcp" Description="The port Lodestar uses for its web interface." Type="Port" Display="always" Required="true" Mask="false"/>
+
+  <Date>2024-05-20</Date>
+  <Changes>
+    - Initial Release
+    - Integrated PGroonga TokenBigram optimization
+    - Fixed pipe (|) OR search logic
+    - Added high-performance discovery tiers
+  </Changes>
+</Container>
