@@ -16,11 +16,10 @@
   </Overview>
   <Category>Tools:Utilities Network:Web MediaApp:Video</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/dvortsis/unraid-templates/main/lodestar.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/dvortsis/lodestar/main/public/compass_logo.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   
-  <Config Name="Postgres Connection URL" Target="POSTGRES_DB_URL" Default="postgresql://username:password@192.168.1.50:5432/bitmagnet" Mode="" Description="The full connection string for your Bitmagnet PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Postgres Connection URL" Target="POSTGRES_DB_URL" Default="YOUR_ACTUAL_CONNECTION_STRING_HERE" Mode="" Description="The full connection string for your Bitmagnet PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false"/>
 
   <Config Name="Web Port" Target="3000" Default="3000" Mode="tcp" Description="The port Lodestar uses for its web interface." Type="Port" Display="always" Required="true" Mask="false"/>
 
