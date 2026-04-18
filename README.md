@@ -6,18 +6,21 @@ This repository contains XML templates for the [Unraid Community Applications (C
 
 * **[Lodestar](https://github.com/dvortsis/lodestar)**: A beautiful, high-performance discovery interface for Bitmagnet. It features a bespoke discovery engine using PGroonga for blazingly fast deep-file searches, tiered relevance ranking, and a mobile-friendly progressive UI.
 
-## How to Add Manually to Unraid
+## Installation
 
-If you want to test the templates before they are officially approved in the CA store, you can add this repository manually to your Unraid server:
+Use this method if you want to keep a local, permanent copy of the template that will **not** be overwritten by remote updates.
 
-1. Log in to your Unraid Web UI.
-2. Navigate to the **Docker** tab.
-3. Scroll down to the bottom where it says **Template Repositories**.
-4. Paste the following URL into the box:
-   `https://github.com/dvortsis/unraid-templates`
-5. Click **Save**.
-6. Click **Add Container** at the bottom of the Docker page.
-7. Select the desired template (e.g., `lodestar`) from the "Template" dropdown menu at the top.
+1. Download the `.xml` file for the application from this repository.
+2. Access your Unraid **Flash** drive (either via SMB share or by plugging the USB into a PC).
+3. Navigate to the following directory on the flash drive:
+   `config/plugins/dockerMan/templates-user/`
+4. Copy your downloaded XML file into this folder.
+   * *Optional: Rename the file to something unique like `my-lodestar.xml`.*
+5. Go to the **Docker** tab in your Unraid Web UI.
+6. Click **Add Container** at the bottom.
+7. Your local template will now appear in the **Template** dropdown menu.
+
+---
 
 ## Support
 
