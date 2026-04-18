@@ -19,8 +19,6 @@
 
   <Icon>https://raw.githubusercontent.com/dvortsis/lodestar/main/public/compass_logo.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
-  
-  <Config Name="Appdata Directory (Scripts)" Target="/app/scripts" Default="/mnt/user/appdata/lodestar" Mode="rw" Description="Location for custom scripts (like janitor.js). Do not change the target to /app or it will overwrite the container's source code." Type="Path" Display="always" Required="true" Mask="false"/>
 
   <Config Name="Postgres Connection URL" Target="POSTGRES_DB_URL" Default="PASTE_YOUR_ACTUAL_CONNECTION_STRING_HERE" Mode="" Description="The full connection string for your Bitmagnet PostgreSQL database." Type="Variable" Display="always" Required="true" Mask="false"/>
 
